@@ -1,0 +1,26 @@
+body{
+    margin: 0px;
+}
+
+h1{
+    font-size: 22px;
+}
+/* 
+.header{
+    background-color: ;
+} */
+
+
+
+/*
+ For topical.html
+ below the comment.
+*/
+.body-topical{
+    background-color: white;
+}
+
+.paragraph-intro-smartcity{
+    color: #1d1111;
+    font-size: 16px; 
+}
