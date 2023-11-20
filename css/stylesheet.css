@@ -1,21 +1,33 @@
 body{
     margin: 0px;
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-left: 40px;
+    line-height: 1.5;
 }
 
 h1{
     font-size: 22px;
+}
+
+.container{
+    display:grid;
+    max-width: 900px;
 }
 /* 
 .header{
     background-color: ;
 } */
 
-
+img{
+    max-width: 100%;
+}
 
 /*
  For topical.html
  below the comment.
 */
+/*
 .body-topical{
     background-color: white;
 }
@@ -24,3 +36,4 @@ h1{
     color: #1d1111;
     font-size: 16px; 
 }
+*/
