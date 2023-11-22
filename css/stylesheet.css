@@ -1,105 +1,21 @@
-body{
-    margin: 0 auto;
-    font-family: sans-serif;
-    background-color: #F2E5D7;
-    color: rgba(13, 0, 7);
-    font-size: 15px;
-    margin-left: 40px;
-    line-height: 1.4;
-    width:100%;
+.body-main{
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #F2E5D7;
+  color: rgb(13, 0, 7);
+  font-size: 15px;
+  height: 100vh;
+  line-height: 1.4;
+  width:100%;
 }
 
-.heading-topical{ 
+.header-main{ 
   background-color: #0B6E4F;
   display:flex;
   justify-content: flex-end;
-  margin-right:40px;
+  padding:1.5rem;
+  font-size: 20px;
 }
-
-h1{
-    font-size: 22px;
-}
-
-em{
-    color: #B86F52;
-}
-
-.photographer{
-    font-size: 14px;
-    color: #231C07;
-    opacity:0.9;
-}
-
-.item{
-    width:823px;
-    
-/* if TEST, then background-color:red*/
-}
-
-.container{
-    display:grid;
-    width:90%;
-    grid-template-columns: 1fr;
-}
-img{
-    max-width:823px; /* media query. watch vids. is it @media(max/min-width:500px)*/ 
-    display: block;
-}
-
-.description-author{
-    font-size: 14px;
-}
-
-.list{
-    width:360px;
-    margin-left: 20px;
-}
-
-.container2{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    border: 3px solid #634133;
-    border-radius: 10px;
-    max-width:800px;
-    padding-right: 20px;
-}
-
-.item2{
-    grid-row: 2/3;
-
-}
-
-.item4{
-    grid-column:2/3;
-
-}
- /* @media add*/
-
-/* The end of topical.html */ 
-
-
-/* CSS styling for dummy-page below this line:*/
-/* ------------------------------------------------------------------------*/
-
-.dummy {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
-}
-
-.header-dummy {
-  background-color: #6b9080;
-  color: #fff;
-  padding: 1em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo-dummy {
-  font-size: 1.5em;
-}  
 
 nav ul {
   list-style: none;
@@ -117,79 +33,317 @@ nav a {
   color: #fff;
   font-weight: bold;
 }
+
+.img-digitech{
+  width:100%;
+}
+
+.img-satellite{
+  width:100%;
+}
+
+.h1-technology{
+  font-size: 22px;
+}
+
+em{
+  color: #B86F52;
+}
+
+.p-photographer{
+  font-size: 14px;
+  color: #231C07;
+  opacity:0.9;
+}
+
+.container{
+  margin: 0 auto; 
+  /* Lager en grid */
+  display:grid;
+  width:80%;
+  grid-template-columns: repeat(auto-fill,
+  minmax(300px, 1fr));
+}
+
+/* lager totalt 8 bokser som samler html elementer som har med hverandre å gjore i teksten */
+.box1 {
+grid-column-start:1;
+grid-column-end: 3;
+}
+
+.box2 {
+grid-column: 1 / 3;
+grid-row: 2 / 3;
+}
+.box3 {
+grid-column: 1 / 3;
+grid-row: 3 / 4;
+}
+
+.box4 {
+grid-column: 1 / 3;
+grid-row: 4 / 5;
+}
+
+.box5 {
+grid-column: 1/ 2;
+grid-row: 5 / 6;
+}
+
+.box6 {
+grid-column: 2 / 3;
+grid-row: 5 / 6;
+}
+
+.box7 {
+grid-column: 1/ 3;
+grid-row: 6 / 7
+}
+
+.box8 {
+grid-column: 1 / 3;
+grid-row: 7 / 8;
+}
+
+.description-author {
+  font-size: 14px;
+}
+
+/* Rom på top og bunnen av liste-elementet */
+.list {
+  width:320px;
+  margin: auto 1px;
+}
+
+/* Skaleres idet skjermstørrelsen er 1000px eller mindre width */ 
+@media (max-width:800px){
+  .container {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr; /* Nå har container kun 1 kolonne*/
+    grid-template-rows: auto;
+    line-height: 1.5;
+  }
+
+  /* Gjør endring grid-column, siden x-asken for kun en kolonne er 1 og 2 */
+  /* Øker grid-row-start og grid-row-end med 1 fra og med boks 5, det som tidligere
+  begynte å inndele i 2 kolonner og 1 rad.*/
+  .box5 {
+   grid-column: 1/ 2;
+  grid-row: 5 / 6;
+
+  }
+
+  .box6 {
+  grid-column: 1/ 2;
+  grid-row: 6/7;
+  }
   
+  .box7 {
+    grid-column: 1/ 2;
+    grid-row: 7 / 8
+  }
+  
+  .box8 {
+    grid-column: 1 / 3;
+    grid-row: 8 / 9;
+  }
+  
+}
+
+@media (max-width: 700px){
+  .index-main {
+    display: grid;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .makerspace {
+    width: 100%;
+  }
+}
+
+@media (min-width: 700px){
+  .index-main {
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        " . . img img"
+        " . . img img"
+        " . . . . "    ;
+  }
+
+  .index-heading {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .first-paragraph {
+    grid-column: 1/3;
+    grid-row: 2;
+  }
+
+  .secondary-heading {
+    grid-column: 1/3;
+    grid-row: 3;
+  }
+
+  .second-paragraph {
+    grid-column: 1/5;
+    grid-row: 4;
+  }
+  
+  .makerspace {
+    grid-area: img;
+    width: 100%;
+    font-size: 0.75rem;
+  }
+}
+
+/* CSS styling for dummy-page below this line:*/
+/* ------------------------------------------------------------------------*/
+
+/*generelt for body*/
+.dummy {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*enkelt oppsett for meny-linjen for aa plassere */
+.header-dummy {
+  background-color: #03045e;
+  color: #fff;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between; /*jevnt mellomrom horisontalt*/
+  align-items: center; /*jevnt mellomrom vertikalt*/
+}
+
+.logo-dummy {
+  font-size: 1.5rem;
+}  
+
+.header-dummy nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*enkelt for list-items i menylinjen*/
+.header-dummy nav li {
+  display: inline;
+  margin-right: 20px;
+} 
+.header-dummy nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+  
+/*mer luftrom mellom linjer for lettere lesing*/
 .main-dummy {
   padding: 20px; 
+  line-height: 1.5;
 }
-  
-.grid-layout {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto auto;
-    /*Section */
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+.img-dummy {
+  width: 80vw;
+  height: 40vw;
 }
-  
-.grid-main {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row: 1;
-}
-  
-.grid-secondary1 {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row: 2;
+
+/*mindre tekststorrelse*/
+.img-txt {
+  font-size: 0.75rem;
 }
 
 ul.ul-secondary1 {
   list-style-type: square;
 }
-  
-.grid-secondary2 {
-  grid-column-start: 1;
-  grid-column-end: 1;
-  grid-row: 3;
-}
-  
-.footer-dummy {
-  background-color: #6b9080;
-  color: #fff;
-  text-align: center;
-  padding: 1em 0;
-}  
 
-@media (min-width: 700px) {
+/*for aa skille h1 og h2 i storre grad*/
+.h2-dummy {
+  font-size: 1.16em;
+  font-weight: 550;
+}
+
+/*veldig simpel footer*/
+.footer-dummy {
+  background-color: #03045e;
+  padding: 1em;
+}
+
+/*grid-layout for 9:16 skjermer (mobil)*/
+@media (max-width: 699) {
+
+  .dummy {
+    background-color: #fff;
+  }
+  
+  /*genererer kun en kolonne og tre rader*/
   .grid-layout {
     display: grid;
-    grid-template-columns: 40vw auto 40vw;
-    grid-template-rows: minmax(100px, auto);
-      /*Section */
+    grid-template-columns: auto; 
+    grid-template-rows: auto auto auto; 
+  }
+
+  /*de tre tekstene legger seg under hverandre*/
+  .grid-main {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row: 1;
+  } 
+  .grid-secondary1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row: 2;
+  }
+  .grid-secondary2 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row: 3;
+  }
+}  
+
+/*grid-layout for 16:9 skjermer (pc)*/
+@media (min-width: 700px) {
+
+  .dummy {
+    background-color: #f0f0f0;
+  }
+
+  /*auto-genererer rader, tre kolonner*/
+  .grid-layout {
+    display: grid;
+    grid-template-columns: 40vw auto 40vw; 
+    grid-auto-rows: minmax(100px, auto);
+      /*mer bredde == all tekst legges i en box*/
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
+  /*main strekker seg fra ende til ende i forste rad*/
   .grid-main {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row: 1;
   }
-    
+  
+  /*secondary1 strekker seg fra linje 1 til 2 i andre rad*/
   .grid-secondary1 {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row: 2;
   }
-  
-  ul.ul-secondary1 {
-    list-style-type: square;
-  }
     
+  /*secondary2 ligger paa samme rad som secondary1, men fra linje 3 til 4*/ 
   .grid-secondary2 {
     grid-column-start: 3;
     grid-column-end: 4;

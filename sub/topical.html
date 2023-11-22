@@ -3,75 +3,91 @@
     <head>
         <title>Topical</title>        
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="../css/stylesheet.css">
     </head>
-    <body class="body-main"> <!-- Testing background-color -->
-        <header class="heading-topical">
+    <body class="body-main"> 
+        <!-- header: indroduserer innhold, nav i dette tilfellet-->
+        <header class="header-main">
+            <!-- Lager en navigation bar-->
             <nav>
                 <ul>
                     <li><a href="../index.html">Index</a></li>
                     <li><a href="accessibility.html">Accessibility</a></li>
                     <li><a href="topical.html">Topical</a></li>
                     <li><a href="dummy.html">Dummy</a></li>
+
                 </ul>
             </nav>
         </header>
-
-        <!-- Grid. Dele noen mini containers i to kolonner. 
-        bruk grid-template-areas. blueprint for oppdeling av containers.-->
-        <div class="container">
-            <!-- item as secondary class--> 
-            <h1 class="item"> The Interplay between Technology and Society</h1>
-            <p class="author"> <em>Per Pedersen- 11/15/2023 </em>, 7:30 PM</p>
-            <p class="item"> Society has become more digitalized now more than ever, a lot of the things that happen in our society 
-                happens through the internet. It can be everything from working at your computer to talking with your 
-                family back home.
-            </p>
-
-            <img class="img-digital item" src="../images/digitalera.webp" alt="aspects of digital technology impacting our daily lives"> 
-            <p class="photographer item">Different ways digital technologies take place in our daily lives. Photo: Amber Pariona</p>
-            <p class="item"> In other rural areas where internet cables may be hard to set up, satellites would
+        <!-- Opprettet en container for å bruke css grid på den. -->
+        <div class="container">   
+            <!-- Lager en sub-container for et par htmlelementer som har med hverandre å gjøre i layouten-->
+            <div class="box1">
+                <h1 class="h1-technology"> The Interplay between Technology and Society</h1>
+                <p class="author"> <em>Per Pedersen- 11/15/2023 </em>, 7:30 PM</p>
+                <p> Society has become more digitalized now more than ever, a lot of the things that happen in our society 
+                    happens through the internet. It can be everything from working at your computer to talking with your 
+                    family back home.
+                </p>
+            <!-- Lager en sub-container. -->
+            <div class="box2">
+                <img class="img-digitech" src="../images/digitalera.webp" alt="aspects of digital technology impacting our daily lives"> 
+                <p class="p-photographer">Different ways digital technologies take place in our daily lives.
+                Photo: Amber Pariona</p>
+                <p> In other rural areas where internet cables may be hard to set up, satellites would
                 give them easier access to internet. Setting up satellite internet is more expensive 
                 <a href="https://ts2.space/en/the-pros-and-cons-of-satellite-internet-is-it-right-for-you/">according to TS2</a>.
-                 Maintenance, plans and installations. It also have latency issues since it has to travel a great distance. 
-            </p>
-
-            <img class="img-satellite item" src="../images/satellite-internet.webp" alt="satellite internet in rural areas">
-            <p class="photographer item"> Internet service provider (bottom) and
-            <a href="https://broadbandnow.com/report/satellite-internet-good-enough-rural-broadband"> specialized satelitte</a>.
-            Photo taken by: Tyler Cooper</p>
-        
-            <h2 class="item"> Potentional impact of satellite internet technology could have on the society </h2>
-            <p class="item"> An unintended consequence is an unwanted accumulation of space garbage in space. 
-                In addition, the satellite internet could impact wildlife such as animal habitats. 
-                The losers are therefore the animals who do not have a say, or anyone to speak their word. </p>
-            <p class="item"> Satellite internet will benefit people that are not able to connect to and use fiber internet.
-                It has a wide range that will reach to big areas where its hard to use the traditional fiber internet.</p>
-        
-            <p class="item"> Those that benefit the from this technology the most are people that live in more remote areas.
-                 However, satellites can’t reach all remote areas where there’s a lot of surroundings such as a forest or a deep canyon. 
-                 Most people that live in cities would rather have internet cables, 
-                because of how cheap and fast it is compared to people that live in remote areas. </p>
-        
-            <p class="item"> There are economic consequences linked to satellite internet, 
-                such as the cost of expanding the satellite internet to rural areas, the cost of launching the satellites in space 
-                and the fact that it will cost more for the individual consumer to use satellite internet. </p>
-        
-            <p class="item"> Satellite could be dangerous for national security since data breaches is more likely to happen. Solution to this would be if leaders would not think about the country’s gain, 
+                Maintenance, plans and installations. It also have latency issues since it has to travel a great distance. 
+                The question is whether satellite internet should be the primary tool to access the internet across the world.
+                </p>
+            </div>
+                <!-- Lager en sub-container  -->
+            <div class="box3">
+                <img class="img-satellite" src="../images/satellite-internet.webp" alt="satellite internet in rural areas">
+                <p class="p-photographer"> Internet service provider (bottom) and
+                <a href="https://broadbandnow.com/report/satellite-internet-good-enough-rural-broadband"> specialized satelitte</a>.
+                    Photo taken by: Tyler Cooper
+                </p>
+            </div>
+            <!-- Lager en sub-container -->
+            <div class="box4">
+            
+                <h2> Potentional impact of satellite internet technology could have on the society </h2>
+                <p> An unintended consequence is an unwanted accumulation of space garbage in space. 
+                    In addition, the satellite internet could impact wildlife such as animal habitats. 
+                    The losers are therefore the animals who do not have a say, or anyone to speak their word. </p>
+                <p> Satellite internet will benefit people that are not able to connect to and use fiber internet.
+                    It has a wide range that will reach to big areas where its hard to use the traditional fiber internet.</p>
+                
+                <p> Those that benefit the from this technology the most are people that live in more remote areas.
+                     However, satellites can’t reach all remote areas where there’s a lot of surroundings such as a forest or a deep canyon. 
+                     Most people that live in cities would rather have internet cables, 
+                    because of how cheap and fast it is compared to people that live in remote areas. </p>
+                
+                <p> There are economic consequences linked to satellite internet, 
+                    such as the cost of expanding the satellite internet to rural areas, the cost of launching the satellites in space 
+                    and the fact that it will cost more for the individual consumer to use satellite internet. </p>
+                
+                <p> Satellite could be dangerous for national security since data breaches is more likely to happen. Solution to this would be if leaders would not think about the country’s gain, 
                 rather they should think about what we gain as the human race.</p>
+            
+            </div>
                 
             <!-- Positive effects V.S  Negative effects H.S -->
-            <div class="container2">
-            <h2 class="positive-effects item1"> Positive Effects</h2>
-                <ol class="item2">
+            <div class="box5">
+                <h2 class="positive-effects"> Positive Effects of satelitte</h2>
+                <ol>
                     <li class="list"> Internet will be more accessible throughout 
                         the world and will have a wider range, especially when it comes to more rural areas. </li>
                     <li class="list"> There would be less sabotages done to the physical cables</li>
                     <li class="list">Less maintaining of the physical cables, and there will be less material spent on producing these </li>
                 </ol>
-        
-            <h2 class="negative-effects item3"> Negative Effects </h2>
-                <ol class="item4">
+            </div>
+            <!-- Lager en sub-container -->
+            <div class="box6">
+                <h2 class="negative-effects"> Negative Effects of satelitte </h2>
+                <ol>
                     <li class="list">Higher latency that is inconsistent. The reason for this is because of the distance 
                         it has to travel. It could also be interrupted by weather. </li>
                     <li class="list">Expensive: Satellites are more expensive in comparison to physical cables. </li>
@@ -79,54 +95,46 @@
                     especially for the ozone layer because of the rocket fuel that is used for getting them up in space.  </li>
                 </ol>
             </div>
-            <h2 class="my-opinion item"> My opinions regarding the topic </h2>
-            <p class="item"> 
-            There are two sides to this case, on one side it may benefit some societies better.
-            Especially in areas that are remote, where it can be hard to set up internet cables. 
-            In addition, satellite internet will be more resilient during a natural disaster, 
-            and can be recovered more quickly. 
-            </p>
-            <p class="item">
-            This way they will be able to use it freely, 
-            but changing everything from fiber to satellite can be problematic because satellite internet
-            could potentially be more expensive and causing more harm to the environment. 
-            </p>
-            <p class="item">
-            By launching an extensive amount of satellites, the more damage it causes to earth's ozone layer.
-            Rocket fuel emits big amounts of CO2 which further affects earth's temperature. 
-            Satellite also has higher latency which makes websites and videos load slower than what we are used to with fiber according to TS2.
-            </p>
-            <h2 class="conclusion-satellite item"> Conclusion</h2>
-            <p class="item"> There are two sides to this case, on one side it may benefit some societies better. 
-                Especially in areas that are remote, where it can be hard to set up internet cables.
-            </p>
-            <p class="item">
-                In addition, satellite internet will be more resilient during a natural disaster,
-                 and can be recovered more quickly. This way they will be able to use it freely, 
-                 but changing everything from fiber to satellite can be problematic because satellite internet
-                could potentially be more expensive and causing more harm to the environment.
-            </p>
-            <p class="item">
-            By launching an extensive amount of satellites, the more damage it causes to earth's ozone layer.
-            Rocket fuel emits big amounts of CO2 which further affects earth's temperature. 
-            Satellite also has higher latency which makes websites and videos load slower 
-            than what we are used to with fiber according to
-            <a href="https://ts2.space/en/the-pros-and-cons-of-satellite-internet-is-it-right-for-you/">TS2</a>.
-            </p>
-
-        <footer> 
-            <div class="footerleft"></div>
-            <div class="footerright"></div>
-        </footer>
-        <div>
+            <!-- Lager en sub-container. Meninger -->
+            <div class="box7">
+                <h2> My opinions regarding the topic </h2>
+                <p> 
+                   There are two sides to this case, on one side it may benefit some societies better.
+                   Especially in areas that are remote, where it can be hard to set up internet cables. 
+                   In addition, satellite internet will be more resilient during a natural disaster, 
+                   and can be recovered more quickly. 
+                </p>
+                <p>
+                   This way they will be able to use it freely, 
+                   but changing everything from fiber to satellite can be problematic because satellite internet
+                   could potentially be more expensive and causing more harm to the environment. 
+                </p>
+                <p>
+                  By launching an extensive amount of satellites, the more damage it causes to earth's ozone layer.
+                  Rocket fuel emits big amounts of CO2 which further affects earth's temperature. 
+                  Satellite also has higher latency which makes websites and videos load slower than what we are used to with fiber according to TS2.
+                </p>
+            </div>
+            <!-- Lager en sub-container -->
+            <div class="box8">
+                <h2> Conclusion</h2>
+                <p> There are two sides to this case, on one side it may benefit some societies better. 
+                    Especially in areas that are remote, where it can be hard to set up internet cables.
+                </p>
+                <p>
+                    In addition, satellite internet will be more resilient during a natural disaster,
+                    and can be recovered more quickly. This way they will be able to use it freely, 
+                    sbut changing everything from fiber to satellite can be problematic because satellite internet
+                    could potentially be more expensive and causing more harm to the environment.
+                </p>
+                <p>
+                    By launching an extensive amount of satellites, the more damage it causes to earth's ozone layer.
+                    Rocket fuel emits big amounts of CO2 which further affects earth's temperature. 
+                    Satellite also has higher latency which makes websites and videos load slower 
+                    than what we are used to with fiber according to
+                <a href="https://ts2.space/en/the-pros-and-cons-of-satellite-internet-is-it-right-for-you/">TS2</a>.
+                </p>
+            </div>
+        </div>
     </body>
 </html>
-<!-- Call sub-container instead of item-->
-<!-- 300-1000 words -->  <!-- short intro, picture, name of-->
-<!-- Relevant images --> <!-- Source below the images - the photographer -->
-<!-- Relevant headings -->
-<!-- Relevant external links. more info in regard to the subject. for example: for more information about....
-    click the following link-->
-<!-- no need to show the whole url link of the sources, make it into a word -->
-<!-- Contrast between the content and the background, use an automated test-->
-<!-- The contrast between background-color and elements utilized on the website-->
